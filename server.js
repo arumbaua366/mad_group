@@ -1,30 +1,46 @@
-// Requiring necessary npm packages
-var express = require("express");
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
+const express = require('express')
+const passport = require('passport')
+const session = require('express-session')
+const db = require('./app/models')
+const authRoute = require('./app/routes/auth.js')
 
-// Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+const app = express()
 
-// Creating express app and configuring middleware needed for authentication
-var app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+var PORT = process.env.PORT || 8080
 
-// Requiring our routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static('public'))
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
-});
+// Parse application body
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+app.use(
+	session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }),
+) // session secret
+
+app.use(passport.initialize())
+
+app.use(passport.session())
+
+var exphbs = require('express-handlebars')
+
+app.engine(
+	'handlebars',
+	exphbs({ defaultLayout: 'main', layoutsDir: './app/views' }),
+)
+app.set('view engine', 'handlebars')
+
+app.get('/', (req, res) => {
+	res.render('index')
+})
+
+authRoute(app, passport)
+
+require('./app/config/passport.js')(passport, db.User)
+
+db.sequelize.sync().then(
+	app.listen(PORT, function () {
+		console.log('App listening on PORT ' + PORT)
+	}),
+)
