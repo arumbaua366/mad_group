@@ -55,12 +55,5 @@ module.exports = function (sequelize, DataTypes) {
 			},
 		},
 	)
-
-	Trips.hook("beforeUpdate", trips => {
-		let arrival = new Date(trips.arrivalDate)
-		let departure = new Date(trips.departureDate)
-
-		trips.duration = (departure - arrival) / 86400000 + 1
-	})
 	return Trips
 }
