@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-	let Destination = sequelize.define("destination", {
+	const Destination = sequelize.define("destination", {
 		city: {
 			type: DataTypes.STRING,
 		},

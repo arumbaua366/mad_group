@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-	let Flight = sequelize.define("flight", {
+	const Flight = sequelize.define("flight", {
 		airline: {
 			type: DataTypes.STRING,
 		},
@@ -19,5 +19,5 @@ module.exports = function (sequelize, DataTypes) {
 		})
 	}
 
-	return Flight
+	return Flight;
 }
