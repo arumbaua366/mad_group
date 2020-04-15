@@ -1,26 +1,23 @@
 {
 	"development": {
-		"username": "lubxc27fz2ogbdh5",
-		"password": "j75ozf71neeamq4t",
-		"database": "ezk1gak8h855l06p",
-		"host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-		"dialect": "mysql",
-		"operatorsAliases": false
+		"username": "root",
+		"password": "Password1!",
+		"database": "",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
 	},
 	"test": {
-		"username": "lubxc27fz2ogbdh5",
-		"password": "j75ozf71neeamq4t",
-		"database": "ezk1gak8h855l06p",
-		"host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-		"dialect": "mysql",
-		"operatorsAliases": false
+		"username": "root",
+		"password": "Password1!",
+		"database": "",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
 	},
 	"production": {
-		"username": "lubxc27fz2ogbdh5",
-		"password": "j75ozf71neeamq4t",
-		"database": "ezk1gak8h855l06p",
-		"host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-		"dialect": "mysql",
-		"operatorsAliases": false
+		"username": "root",
+		"password": "Password1!",
+		"database": "",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
 	}
 }
