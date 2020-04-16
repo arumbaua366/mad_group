@@ -25,7 +25,7 @@ $(document).ready(function() {
   // Otherwise we log any errors
   function signUpUser(email, password) {
     console.log("signup before ajax call", email, password)
-    $.post("/api/signup", {
+    $.post("/signup", {
       email: email,
       password: password
     })
