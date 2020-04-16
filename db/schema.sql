@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS userinfo_db
+DROP DATABASE IF EXISTS userinfo_db;
 
 CREATE DATABASE userinfo_db;
 USE userinfo_db;
@@ -6,7 +6,8 @@ USE userinfo_db;
 DROP DATABASE if exists user;
 DROP DATABASE if exists trips;
 DROP DATABASE if exists flights;
-DROP DATABASE if exists hotel
+DROP DATABASE if exists hotel;
+DRop DATABASE if exists activities;
 
 
 CREATE TABLE user
@@ -27,7 +28,7 @@ CREATE TABLE trips
 	destination_state VARCHAR(255) NOT NULL,
 	arrival_date VARCHAR(255) NOT NULL,
 	departure_date VARCHAR(255) NOT NULL,
-	duration 
+	
 	PRIMARY KEY (id)
 );
 
@@ -39,4 +40,14 @@ CREATE TABLE flights
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE 
+
+CREATE TABLE activities
+(
+	id INT NOT NULL AUTO_INCREMENT,
+	categories VARCHAR(255) NOT NULL,
+	businesses VARCHAR(255) NOT Null,
+	events VARCHAR(255) NOT NULL
+	PRIMARY KEY(id)
+
+
+);

@@ -1,22 +1,22 @@
 {
 	"development": {
 		"username": "root",
-		"password": "Password1!",
-		"database": "",
+		"password": "Stockton209",
+		"database": "userinfo_db",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
 	},
 	"test": {
 		"username": "root",
 		"password": "Password1!",
-		"database": "",
+		"database": "userinfo_db",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
 	},
 	"production": {
 		"username": "root",
 		"password": "Password1!",
-		"database": "",
+		"database": "userinfo_db",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
 	}

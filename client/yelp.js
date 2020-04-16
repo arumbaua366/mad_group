@@ -1,7 +1,7 @@
 'use strict';
 
 const yelp = require('yelp-fusion');
-const db = require('../db')
+
 
 // Place holder for Yelp Fusion's API Key. Grab them
 // from https://www.yelp.com/developers/v3/manage_app
@@ -22,7 +22,7 @@ module.exports = function(app){
   })
 })
 
-app.get('/topactivities', (req, res, next) => {
+app.get('/activities', (req, res, next) => {
   client.search({location: req.query.city, sort_by: 'rating', limit: 5})
     .then(response => {
       res.json(response.jsonBody.businesses)
