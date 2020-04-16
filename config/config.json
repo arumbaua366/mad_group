@@ -2,7 +2,11 @@
 <<<<<<< HEAD
 	"development": {
 		"username": "root",
+<<<<<<< HEAD
 		"password": "Stockton209",
+=======
+		"password": "Password1!",
+>>>>>>> andrea
 		"database": "userinfo_db",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
@@ -15,10 +19,15 @@
 		"dialect": "mysql"
 	},
 	"production": {
+<<<<<<< HEAD
 		"username": "root",
 		"password": "Password1!",
 		"database": "userinfo_db",
 		"host": "127.0.0.1",
+=======
+        "use_env_variable": "JAWSDB_URL",
+		"database": "userinfo_db",
+>>>>>>> andrea
 		"dialect": "mysql"
 	}
 =======
