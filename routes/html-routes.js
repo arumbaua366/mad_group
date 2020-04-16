@@ -48,5 +48,19 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("members")
   });
+  app.get("/friends", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("friends")
+  });
+  app.get("/ideas", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("ideas")
+  });
+  app.get("/calendar", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("calendar")
+  });
+
+  
 
 };

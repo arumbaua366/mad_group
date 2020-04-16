@@ -1,33 +1,41 @@
+<header class="subnav-hero-section">
+  <ul class="subnav-hero-subnav">
+    <li><a href="/members">Dashboard</a></li>
+    <li><a href="/friends" class="is-active">Friends</a></li>
+    <li><a target="_blank" href="/">Logout</a></li>
+  </ul>
+</header>
 
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Welcome <span>{{memberName}}!</span></h2>
     </div>
   </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-//<<<<<<< master
-//        <h2>Welcome <span id="member-name"></span></h2>
-=======
-//        <h2>Welcome <span>{{memberName}}!</span></h2>
-//>>>>>>> don
+</div>
 
-      </div>
-    </div>
+{{!-- 
+<div id="userpage-welcome">
+  <div id="adventure">
+    <h1 className="raleway">Start your next adventure.</h1>
+    <p>Invite your friends, set your budgets and we'll let you know where you can go and help you plan what you can do!
+    </p>
+    
+    <button className="button" onClick=>Create a Trip</button>
+
+  {{!-- </div>
+  <div className="center-vertically">
+    <img src="/images/map.png" id="map-image" />
   </div>
+</div> --}} --}}
 
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-//<<<<<<< master
-//  <script type="text/javascript" src="/js/members.js"></script>
-//=======
-//  <script type="text/javascript" src="/public/js/members.js"></script>
-//>>>>>>> don
+<link rel="stylesheet" href="css/members.css">
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+	integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="/js/members.js"></script>
+<script type="text/javascript" src="/public/js/members.js"></script>
