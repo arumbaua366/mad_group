@@ -2,3 +2,10 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+body {
+  background-image: url('../images/airplane_window.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
