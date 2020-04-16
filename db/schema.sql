@@ -5,11 +5,9 @@ USE userinfo_db;
 
 DROP DATABASE if exists user;
 DROP DATABASE if exists trips;
-DROP DATABASE if exists flights;
-DROP DATABASE if exists hotel
 
 
-CREATE TABLE user
+CREATE TABLE users
 (
 	id INT NOT NULL AUTO_INCREMENT,
 	first_name VARCHAR(100) NOT NULL,
@@ -22,21 +20,6 @@ CREATE TABLE trips
 (
 	id INT NOT NULL AUTO_INCREMENT,
 	title VARCHAR(255) NOT NULL,
-	default_budget DECIMAL (10, 2),
 	destination_city VARCHAR(255) NOT NULL,
-	destination_state VARCHAR(255) NOT NULL,
-	arrival_date VARCHAR(255) NOT NULL,
-	departure_date VARCHAR(255) NOT NULL,
-	duration 
 	PRIMARY KEY (id)
 );
-
-CREATE TABLE flights
-(
-	id INT NOT NULL AUTO_INCREMENT,
-	price DECIMAL (10, 2),
-	airline VARCHAR(255) NOT NULL,
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE 

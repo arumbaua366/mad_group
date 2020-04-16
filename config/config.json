@@ -14,10 +14,8 @@
 		"dialect": "mysql"
 	},
 	"production": {
-		"username": "root",
-		"password": "Password1!",
+        "use_env_variable": "JAWSDB_URL",
 		"database": "userinfo_db",
-		"host": "127.0.0.1",
 		"dialect": "mysql"
 	}
 }

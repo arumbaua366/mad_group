@@ -1,50 +1,90 @@
-@import "../node_modules/codyhouse-framework/main/assets/css/base";
 
-.sr-only {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	padding: 0;
-	border: 0;
-	white-space: nowrap;
-}
+.card-user-container {
+    margin-bottom: 1rem;
+    background-color: #fefefe;
+    color: #0a0a0a;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  .card-user-container .card-user-avatar .user-image {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 11.875rem;
+    height: 11.875rem;
+    padding: 0.9375rem;
+  }
+  
+  .card-user-container .card-user-avatar .user-image:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .card-user-container .card-user-bio {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-user-container .card-user-bio .location {
+    display: inline-block;
+    margin: 0 0.9375rem;
+    color: #767676;
+    font-size: 0.875rem;
+  }
+  
+  .card-user-container .card-user-bio .location-icon,
+  .card-user-container .card-user-bio .location-text {
+    display: inline-block;
+    padding: 0 0.3125rem;
+  }
+  
+  .card-user-container .card-user-social {
+    background: #e6e6e6;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-user-container .card-user-social ul {
+    display: inline-block;
+  }
+  
+  .card-user-container .card-user-social ul li {
+    margin: 0 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .card-user-container .card-user-social ul li:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .card-user-container .card-user-button {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  #userpage-welcome {
+    display: flex;
+    padding: 4rem 0;
+    margin: auto;
+  }
 
-body {
-	padding: var(--space-md);
-}
+  #adventure{
+    padding-left: 8rem;
+    align-self: center;
+  }
+  
+  .raleway{
+    font-family: 'Raleway';
+  }
 
-.grid > * {
-	text-align: center;
-	padding: var(--space-md);
-}
-
-header,
-footer {
-	background-color: hsla(
-		var(--color-primary-h),
-		var(--color-primary-s),
-		var(--color-primary-l),
-		0.8
-	);
-}
-
-aside {
-	background-color: hsla(
-		var(--color-primary-h),
-		var(--color-primary-s),
-		var(--color-primary-l),
-		0.2
-	);
-}
-
-main {
-	background-color: hsla(
-		var(--color-primary-h),
-		var(--color-primary-s),
-		var(--color-primary-l),
-		0.5
-	);
-}
+  #map-image{
+    width: 150px;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
