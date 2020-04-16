@@ -18,32 +18,8 @@ module.exports = function(app) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
-<<<<<<< HEAD
-    } 
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("login")
-  });
-
-  app.get("/signup", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("signup")
-  });
-
-  app.get("/calendar", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/calendar");
-    }
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("calendar")
-=======
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
->>>>>>> andrea
   });
 
   /// get route for yelp activities

@@ -1,16 +1,12 @@
 {
-<<<<<<< HEAD
 	"development": {
 		"username": "root",
-<<<<<<< HEAD
-		"password": "Stockton209",
-=======
 		"password": "Password1!",
->>>>>>> andrea
 		"database": "userinfo_db",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
-	},
+    },
+    
 	"test": {
 		"username": "root",
 		"password": "Password1!",
@@ -19,41 +15,10 @@
 		"dialect": "mysql"
 	},
 	"production": {
-<<<<<<< HEAD
-		"username": "root",
-		"password": "Password1!",
-		"database": "userinfo_db",
-		"host": "127.0.0.1",
-=======
+
+
         "use_env_variable": "JAWSDB_URL",
 		"database": "userinfo_db",
->>>>>>> andrea
 		"dialect": "mysql"
 	}
-=======
-    "development": {
-        "username": "lubxc27fz2ogbdh5",
-        "password": "j75ozf71neeamq4t",
-        "database": "ezk1gak8h855l06p",
-        "host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "dialect": "mysql",
-        "operatorsAliases": false
-    },
-    "test": {
-        "username": "lubxc27fz2ogbdh5",
-        "password": "j75ozf71neeamq4t",
-        "database": "ezk1gak8h855l06p",
-        "host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "dialect": "mysql",
-        "operatorsAliases": false
-    },
-    "production": {
-        "username": "lubxc27fz2ogbdh5",
-        "password": "j75ozf71neeamq4t",
-        "database": "ezk1gak8h855l06p",
-        "host": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "dialect": "mysql",
-        "operatorsAliases": false
-    }
->>>>>>> b19ea8bfa8fd614161d7cc1e6f1040c5feea2091
-}
+
