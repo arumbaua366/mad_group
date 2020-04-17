@@ -4,11 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack",
-		"dev": "concurrently \"webpack --mode development --watch\" \"nodemon server.js\"",
 		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css)\"",
 		"lint": "eslint --ignore-path .gitignore .",
-		"validate": "npm run format && npm run lint &&npm run build",
+		"validate": "npm run format && npm run lint",
 		"start": "node server.js"
 	},
 	"author": "",
