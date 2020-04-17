@@ -22,17 +22,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  /// get route for yelp activities
-  app.get('/activities', function(req, res){
-    if (req.user){
-      res.redirect('activities');
-  };
-    res.render('activities');
-});
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("members")
   });
 
   app.get("/friends", isAuthenticated, function(req, res) {
@@ -47,5 +41,16 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("map")
   });
+ /// get route for yelp activities
+ app.get("/activities", isAuthenticated, function(req, res) {
+  res.render('activities');
+});
+app.get("/calendar", function(req, res) {
+  if (req.user) {
+  res.render("calendar")
+}});
+
+
+
 };
 

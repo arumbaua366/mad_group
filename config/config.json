@@ -1,7 +1,7 @@
 {
 	"development": {
 		"username": "root",
-		"password": "Password1!",
+		"password": "root",
 		"database": "userinfo_db",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
@@ -18,6 +18,11 @@
         "use_env_variable": "JAWSDB_URL",
 		"database": "userinfo_db",
 		"dialect": "mysql"
+<<<<<<< HEAD
     }
 }
 
+=======
+	}
+}
+>>>>>>> 97c57d2eeb21bfa12a5d8ce4981c94b2b235be70
