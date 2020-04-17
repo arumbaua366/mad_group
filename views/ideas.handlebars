@@ -9,22 +9,113 @@
 
 <h1>Plan Your trip!</h1>
 
-<div class="product-card">
-  <div class="product-card-thumbnail">
-    <a href="#"><img src="https://placehold.it/180x180"/></a>
+
+</br>
+
+<div class="translucent-form-overlay">
+  <form>
+    <h3>Trip Details</h3>
+    <div class="row columns">
+      <label>Name your trip:
+        <input type="text" name="keyword" placeholder="Any">
+      </label>
+    </div>
+    <div class="row columns">
+      <label>Preferred mode of transportation:
+        <select name="status" type="text">
+          <option>Any</option>
+          <option value="Airplane">Airplane</option>
+          <option value="Car">Car</option>
+          <option value="Ship">Ship</option>
+          <option value="Train">Train</option>
+        </select>
+      </label>
+    </div>
+    <div class="row columns">
+      <label>Min and Max amount of days for you trip:
+          <div class="columns small-6">
+        <input type="number" min="1" name="min" placeholder="Min">
+      </div>
+      <div class="columns small-6">
+        <input type="number" min="5" name="max" placeholder="Max">
+      </div>
+      </label>
+    </div>
+    <div class="row columns">
+      <label>City your leaving from
+        <input type="text" name="location" placeholder="Sacramento, CA">
+      </label>
+    </div>
+    <div class="row">
+      <label class="columns small-12">Trip Budget</label>
+      <div class="columns small-6">
+        <input type="number" min="0" name="min" placeholder="Min">
+      </div>
+      <div class="columns small-6">
+        <input type="number" min="0" name="max" placeholder="Max">
+      </div>
+    </div>
+    <button type="button" class="primary button expanded search-button">
+      Search
+    </button>
+ </form>
+</div>
+
+<div class="featured-image-block-grid">
+  <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+    <h2>Top Destinations</h2>
+    <p>Start planning your travels here with the latest deals for popular destinations.</p>
   </div>
-  <h2 class="product-card-title"><a href="#">Product Name</a></h2>
-  <span class="product-card-desc">Product Description</span>
-  <span class="product-card-price">$9.99</span><span class="product-card-sale">$12.99</span>
-  <div class="product-card-colors">
-    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+  <div class="row large-up-4 small-up-2">
+       
+    <div class="featured-image-block column">
+     <a href="#">
+        <img src="https://unsplash.it/600/440?image=693" />
+        <p class="text-left featured-image-block-title">San Francisco</p>
+      </a>
+    </div>
+    
+    <div class="featured-image-block column">
+     <a href="#">
+        <img src="https://unsplash.it/600/440?image=452" />
+        <p class="text-left featured-image-block-title">Las Vegas</p>
+      </a>
+    </div>
+    
+     
+    <div class="featured-image-block column">
+     <a href="#">
+        <img src="https://unsplash.it/600/440?image=667" />
+        <p class="text-left featured-image-block-title">Los Angeles</p>
+      </a>
+    </div>
+  
+    <div class="featured-image-block column">
+     <a href="#">
+        <img src="https://unsplash.it/600/440?image=249" />
+        <p class="text-left featured-image-block-title">Chicago</p>
+      </a>
+    </div>
+    
+    <div class="featured-image-block column">
+     <a href="#">
+        <img src="https://unsplash.it/600/440?image=382" />
+        <p class="text-left featured-image-block-title">Boston</p>
+      </a>
+    </div>
+
+    <div class="featured-image-block column">
+     <a href="#">
+        <img src="https://unsplash.it/600/440?image=1075" />
+        <p class="text-left featured-image-block-title">Seattle</p>
+      </a>
+    </div>
   </div>
 </div>
 
-<link rel="stylesheet" href="/stylesheets/ideas.css">
+
+
+<link rel="stylesheet" href="stylesheets/ideas.css">
 <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
 	integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/js/login.js"></script>
