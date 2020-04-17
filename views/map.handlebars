@@ -23,7 +23,6 @@
   </style>
 </head>
 <body>
-
   <div id='map'><header class="subnav-hero-section">
   <ul class="subnav-hero-subnav">
     <li><a href="/members">Dashboard</a></li>
@@ -32,6 +31,8 @@
     <li><a href="/map">Map View</a></li>
     <li><a href="login.html">Logout</a></li>
   </ul>
+
+
 </header></div>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiYXJ1bWJhdWEzNjYiLCJhIjoiY2s4bHl2MG5vMGRxdDNmbWluNHA4aXMzdyJ9.hNH7BtBBdGmRWMMwcnhNWw';
@@ -46,7 +47,7 @@
   .setLngLat([-121.4939328, 38.581021]) // Marker [lng, lat] coordinates
   .addTo(map); // Add the marker to the map
 
-  var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+var geocoder = new MapboxGeocoder({ // Initialize the geocoder
   accessToken: mapboxgl.accessToken, // Set the access token
   mapboxgl: mapboxgl, // Set the mapbox-gl instance
   marker: false, // Do not use the default marker style
@@ -102,7 +103,6 @@ map.on('click', function(e) {
   if (!features.length) {
     return;
   }
-
   var feature = features[0];
 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
