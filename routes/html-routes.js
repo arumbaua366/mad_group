@@ -11,8 +11,8 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("index")
-    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    // res.render("index")
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
   app.get("/login", function(req, res) {
@@ -20,8 +20,8 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("login")
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+    // res.render("login")
   });
 
   app.get("/signup", function(req, res) {
@@ -29,17 +29,8 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("signup")
-  });
-
-  app.get("/calendar", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/calendar");
-    }
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("calendar")
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+    // res.render("signup")
   });
 
   // Here we've add our isAuthenticated middleware to this route.
@@ -49,18 +40,21 @@ module.exports = function(app) {
     res.render("members")
   });
   app.get("/friends", isAuthenticated, function(req, res) {
-    // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("friends")
   });
   app.get("/ideas", isAuthenticated, function(req, res) {
-    // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("ideas")
   });
+  app.get("/activities", isAuthenticated, function(req, res) {
+    res.render("activities")
+  });
   app.get("/calendar", isAuthenticated, function(req, res) {
-    // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("calendar")
   });
+  app.get("/map", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("map")
+  });
 
-  
 
 };
