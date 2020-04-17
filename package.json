@@ -9,7 +9,7 @@
 		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css)\"",
 		"lint": "eslint --ignore-path .gitignore .",
 		"validate": "npm run format && npm run lint &&npm run build",
-		"start": "node server.js",
+		"start": "node server.js"
 	},
 	"author": "",
 	"license": "ISC",
