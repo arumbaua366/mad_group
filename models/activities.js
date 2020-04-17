@@ -1,23 +1,23 @@
 module.exports = function (sequelize, DataTypes) {
-	const Destination = sequelize.define("destination", {
-		city: {
+	const Activities = sequelize.define("activities", {
+		categories: {
 			type: DataTypes.STRING,
 		},
-		state: {
+		businesses: {
 			type: DataTypes.STRING,
 		},
-		airport: {
+		events: {
 			type: DataTypes.STRING,
 		},
 	})
 
-	Destination.associate = function (models) {
-		Destination.belongsTo(models.User, {
+	Activities.associate = function (models) {
+		Activities.belongsTo(models.User, {
 			foreignKey: {
 				allowNull: false,
 			},
 		})
 	}
 
-	return Destination
+	return Activities
 }

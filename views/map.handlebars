@@ -13,6 +13,7 @@
       margin: 0;
       padding: 0;
     }
+
     #map {
       position: absolute;
       top: 0;
@@ -22,7 +23,7 @@
   </style>
 </head>
 <body>
-<header class="subnav-hero-section">
+  <div id='map'><header class="subnav-hero-section">
   <ul class="subnav-hero-subnav">
     <li><a href="/members">Dashboard</a></li>
     <li><a href="/friends">Friends</a></li>
@@ -30,8 +31,9 @@
     <li><a href="/map">Map View</a></li>
     <li><a href="login.html">Logout</a></li>
   </ul>
-</header>
-  <div id='map'></div>
+
+
+</header></div>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiYXJ1bWJhdWEzNjYiLCJhIjoiY2s4bHl2MG5vMGRxdDNmbWluNHA4aXMzdyJ9.hNH7BtBBdGmRWMMwcnhNWw';
   placeholder: 'Search for places in Sacramento'
@@ -44,7 +46,8 @@
   var marker = new mapboxgl.Marker() // initialize a new marker
   .setLngLat([-121.4939328, 38.581021]) // Marker [lng, lat] coordinates
   .addTo(map); // Add the marker to the map
-  var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+
+var geocoder = new MapboxGeocoder({ // Initialize the geocoder
   accessToken: mapboxgl.accessToken, // Set the access token
   mapboxgl: mapboxgl, // Set the mapbox-gl instance
   marker: false, // Do not use the default marker style
@@ -54,6 +57,7 @@
       latitude: 38.581021
     } // Coordinates of Sacramento
 });
+
 // Add the geocoder to the map
 map.addControl(geocoder);
 map.addControl(
@@ -64,6 +68,7 @@ enableHighAccuracy: true
 trackUserLocation: true
 })
 );
+
 map.on('load', function() {
   map.addSource('single-point', {
     type: 'geojson',
@@ -72,6 +77,7 @@ map.on('load', function() {
       features: []
     }
   });
+
   map.addLayer({
     id: 'point',
     source: 'single-point',
@@ -81,6 +87,7 @@ map.on('load', function() {
       'circle-color': '#448ee4'
     }
   });
+
   // Listen for the `result` event from the Geocoder
   // `result` event is triggered when a user makes a selection
   //  Add a marker at the result's coordinates
@@ -92,10 +99,12 @@ map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
     layers: ['layer-name-here'] // replace this with the name of the layer
   });
+
   if (!features.length) {
     return;
   }
   var feature = features[0];
+
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
     .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')

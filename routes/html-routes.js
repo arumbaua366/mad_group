@@ -11,7 +11,6 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    // res.render("index")
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
@@ -57,4 +56,28 @@ module.exports = function(app) {
   });
 
 
+  app.get("/friends", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("friends")
+  });
+  app.get("/ideas", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("ideas")
+  });
+  app.get("/map", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("map")
+  });
+ /// get route for yelp activities
+ app.get("/activities", isAuthenticated, function(req, res) {
+  res.render('activities');
+});
+app.get("/calendar", function(req, res) {
+  if (req.user) {
+  res.render("calendar")
+}});
+
+
+
 };
+

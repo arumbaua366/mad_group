@@ -3,29 +3,41 @@
     <li><a href="/members">Dashboard</a></li>
     <li><a href="/friends">Friends</a></li>
     <li><a href="/ideas">Ideas</a></li>
+    <li><a href="/map">Map View</a></li>
     <li><a href="login.html">Logout</a></li>
   </ul>
 </header>
- 
 
 
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2>Welcome <span>{{memberName}}!</span></h2>
-     </div>
-   </div>
-
+      <h2>Welcome <span>{{user}}!</span></h2>
+    </div>
+  </div>
 </div>
 
 
+<div id="userpage-welcome">
+  <div id="adventure">
+    <h1 className="raleway">Start your next adventure.</h1>
+    <p>Invite your friends, set your budgets and we'll let you know where you can go and help you plan what you can do!
+    </p>
+    
+    <button className="button"><a href="/ideas">Create a Trip</a></button></button> 
+
+  </div>
+  <div className="center-vertically">
+    <img src="images/map.png" id="map-image" />
+  </div>
+</div>
 
 <h3>Daily Schedule</h3>
 <p>Click on the calendar to show your daily schedule</p>
- <a href="/calendar">
-   <img src="images/calendar.jpg" alt="Calendar" style="width:200px;height:200px;border:0">
- </a>
- 
+<a href="/calendar">
+  <img src="images/calendar.jpg" alt="Calendar" style="width:200px;height:200px;border:0">
+</a>
+
 </br>
 </br>
 
@@ -36,6 +48,10 @@
 
 <h3>Past Trips</h3>
 <p>No past trips</p>
- 
- <link rel="stylesheet" href="stylesheets/members.css">
- <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+
+<link rel="stylesheet" href="/stylesheets/members.css">
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+	integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/js/members.js"></script>
+<script type="text/javascript" src="/public/js/members.js"></script>
